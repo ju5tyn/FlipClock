@@ -8,7 +8,8 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -40,6 +41,7 @@ Temporary Items
 
 ## User settings
 xcuserdata/
+WorkspaceSettings.xcsettings
 
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint

@@ -23,9 +23,13 @@ struct ClockElement: View {
                 Text(String(number))
                     .font(.custom("Helvetica", size: 100))
                     .fontWeight(.bold)
-                    .foregroundStyle(.white)
-                
+                    .foregroundStyle(Color(red: 0.85, green: 0.85, blue: 0.85))
+                Rectangle()
+                    .fill(Color.black)
+                    .frame(height: 2)
             }
+            
         }
     }
 }
+
