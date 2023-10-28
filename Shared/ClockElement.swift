@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ClockElement: View {
     
-    var number: Int
+    var number: String
+    
+    var padding: CGFloat = 2
     
     var body: some View {
         Group {
@@ -21,12 +23,17 @@ struct ClockElement: View {
                     .foregroundStyle(.gray)
                     .clipShape(.rect(cornerRadii: RectangleCornerRadii(topLeading: 10, bottomLeading: 10, bottomTrailing: 10, topTrailing: 10)))
                 Text(String(number))
-                    .font(.custom("Helvetica", size: 100))
+                    .font(.custom("Helvetica", size: 500))
                     .fontWeight(.bold)
                     .foregroundStyle(Color(red: 0.85, green: 0.85, blue: 0.85))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.1)
+                    .padding(.all, 10)
+                    .shadow(radius: 2)
                 Rectangle()
                     .fill(Color.black)
-                    .frame(height: 2)
+                    .opacity(0.5)
+                    .frame(height: padding)
             }
             
         }

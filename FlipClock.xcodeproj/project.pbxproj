@@ -22,6 +22,7 @@
 		3A4BCADB2AED875B00B0DE02 /* MinutesWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BCAD82AED82C900B0DE02 /* MinutesWidget.swift */; };
 		3A4BCADE2AED95C000B0DE02 /* ClockElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BCADD2AED95C000B0DE02 /* ClockElement.swift */; };
 		3A4BCADF2AED95C000B0DE02 /* ClockElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BCADD2AED95C000B0DE02 /* ClockElement.swift */; };
+		3A4BCAE22AEDC99F00B0DE02 /* DualWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BCAE12AEDC99F00B0DE02 /* DualWidget.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		3A4BCAD82AED82C900B0DE02 /* MinutesWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutesWidget.swift; sourceTree = "<group>"; };
 		3A4BCADD2AED95C000B0DE02 /* ClockElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockElement.swift; sourceTree = "<group>"; };
 		3A4BCAE02AED97C200B0DE02 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		3A4BCAE12AEDC99F00B0DE02 /* DualWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualWidget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				3A4BCAC42AED7A5600B0DE02 /* FlipClockWidgetBundle.swift */,
 				3A4BCAC82AED7A5600B0DE02 /* SharedProvider.swift */,
 				3A4BCAD62AED82B400B0DE02 /* HoursWidget.swift */,
+				3A4BCAE12AEDC99F00B0DE02 /* DualWidget.swift */,
 				3A4BCAD82AED82C900B0DE02 /* MinutesWidget.swift */,
 				3A4BCACA2AED7A5600B0DE02 /* AppIntent.swift */,
 				3A4BCACC2AED7A5800B0DE02 /* Assets.xcassets */,
@@ -274,6 +277,7 @@
 				3A4BCACB2AED7A5600B0DE02 /* AppIntent.swift in Sources */,
 				3A4BCADA2AED875800B0DE02 /* HoursWidget.swift in Sources */,
 				3A4BCADF2AED95C000B0DE02 /* ClockElement.swift in Sources */,
+				3A4BCAE22AEDC99F00B0DE02 /* DualWidget.swift in Sources */,
 				3A4BCAC52AED7A5600B0DE02 /* FlipClockWidgetBundle.swift in Sources */,
 				3A4BCAC92AED7A5600B0DE02 /* SharedProvider.swift in Sources */,
 			);

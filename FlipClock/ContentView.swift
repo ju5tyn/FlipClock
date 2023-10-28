@@ -9,31 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var hours: String = ""
-    @State private var minutes: String = ""
+    @State private var hours: String = "..."
+    @State private var minutes: String = "..."
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
-        Group() {
-            VStack {
-                Spacer()
-                Text(hours)
-                    .font(.custom("Helvetica", size: 200))
-                    .fontWeight(.bold)
-                Text(minutes)
-                    .font(.custom("Helvetica", size: 200))
-                    .fontWeight(.bold)
-                Spacer()
-            }
-            .padding()
-            .onReceive(timer) { _ in
-                let components = Calendar.current.dateComponents([.hour, .minute], from: Date())
-                if let hour = components.hour, let minute = components.minute {
-                    hours = String(format: "%02d", hour)
-                    minutes = String(format: "%02d", minute)
+        LazyVStack {
+            HStack {
+                Group {
+                    ClockElement(number: hours, padding: 2.5)
+                    ClockElement(number: minutes, padding: 2.5)
                 }
+            }.padding()
         }
+        .padding()
+        .onReceive(timer) { _ in
+            let components = Calendar.current.dateComponents([.hour, .minute], from: Date())
+            if let hour = components.hour, let minute = components.minute {
+                hours = String(format: "%02d", hour)
+                minutes = String(format: "%02d", minute)
+            }
         }
     }
 }

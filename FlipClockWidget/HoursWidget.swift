@@ -12,7 +12,7 @@ struct HoursEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {
-        ClockElement(number: Calendar.current.component(.hour, from: entry.date))
+        ClockElement(number: String(format: "%02d", Calendar.current.component(.hour, from: entry.date)))
     }
 }
 
@@ -22,7 +22,7 @@ struct HoursWidget: Widget {
     var body: some WidgetConfiguration {
         AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
             HoursEntryView(entry: entry)
-                .containerBackground(.fill.tertiary, for: .widget)
+                .containerBackground(.black, for: .widget)
         }.supportedFamilies([.systemSmall])
     }
 }

@@ -13,5 +13,6 @@ struct FlipClockWidgetBundle: WidgetBundle {
     var body: some Widget {
         HoursWidget()
         MinutesWidget()
+        DualWidget()
     }
 }
