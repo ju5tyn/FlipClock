@@ -15,20 +15,22 @@ struct ContentView: View {
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
-        LazyVStack {
-            HStack {
-                Group {
-                    ClockElement(number: hours, padding: 2.5)
-                    ClockElement(number: minutes, padding: 2.5)
+        NavigationStack {
+            LazyVStack {
+                HStack {
+                    Group {
+                        ClockElement(number: hours, padding: 2.5)
+                        ClockElement(number: minutes, padding: 2.5)
+                    }
+                }.padding()
+            }
+            .padding()
+            .onReceive(timer) { _ in
+                let components = Calendar.current.dateComponents([.hour, .minute], from: Date())
+                if let hour = components.hour, let minute = components.minute {
+                    hours = String(format: "%02d", hour)
+                    minutes = String(format: "%02d", minute)
                 }
-            }.padding()
-        }
-        .padding()
-        .onReceive(timer) { _ in
-            let components = Calendar.current.dateComponents([.hour, .minute], from: Date())
-            if let hour = components.hour, let minute = components.minute {
-                hours = String(format: "%02d", hour)
-                minutes = String(format: "%02d", minute)
             }
         }
     }

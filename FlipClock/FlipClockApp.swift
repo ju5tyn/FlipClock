@@ -11,7 +11,8 @@ import SwiftUI
 struct FlipClockApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-        }
+            ContentView().preferredColorScheme(.dark)
+                .background(.black).ignoresSafeArea(.all)
+        }.windowStyle(.hiddenTitleBar)
     }
 }
