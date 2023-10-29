@@ -1,4 +1,4 @@
-# Flip Clock for iOS 17
+# FlipClock
 
 <div align="center">
   <img src="https://justynhenman.com/images/thumbs/flipclock.png" alt="Flip Clock" width="300">
