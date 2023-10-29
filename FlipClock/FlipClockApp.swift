@@ -11,12 +11,13 @@ import SwiftUI
 struct FlipClockApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView().preferredColorScheme(.dark)
-                .background(.black).ignoresSafeArea(.all)
+            ContentView()
+                .preferredColorScheme(.dark)
+                .background(.black)
         }
-        
         #if os(macOS)
-        .windowStyle(.hiddenTitleBar)
+        .windowStyle(.titleBar)
+        .windowResizability(.contentMinSize)
         #endif
     }
 }

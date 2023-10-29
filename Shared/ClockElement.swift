@@ -22,6 +22,7 @@ struct ClockElement: View {
                                     Color(red: 0.05, green: 0.05, blue: 0.05)]), startPoint: .top, endPoint: .bottom)
                     .foregroundStyle(.gray)
                     .clipShape(.rect(cornerRadii: RectangleCornerRadii(topLeading: 10, bottomLeading: 10, bottomTrailing: 10, topTrailing: 10)))
+                    .aspectRatio(1.0, contentMode: .fit)
                 Text(String(number))
                     .font(.custom("Helvetica", size: 500))
                     .fontWeight(.bold)
@@ -30,13 +31,14 @@ struct ClockElement: View {
                     .minimumScaleFactor(0.1)
                     .padding(.all, 10)
                     .shadow(radius: 2)
+                    .contentTransition(.numericText())
                 Rectangle()
                     .fill(Color.black)
                     .opacity(0.5)
                     .frame(height: padding)
             }
             
-        }
+        }.id(number)
     }
 }
 

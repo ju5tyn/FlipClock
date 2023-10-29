@@ -20,11 +20,16 @@ struct ContentView: View {
                 HStack {
                     Group {
                         ClockElement(number: hours, padding: 2.5)
+                        #if os(macOS)
+                            .padding()
+                        #endif
                         ClockElement(number: minutes, padding: 2.5)
+                        #if os(macOS)
+                            .padding()
+                        #endif
                     }
                 }.padding()
             }
-            .padding()
             .onReceive(timer) { _ in
                 let components = Calendar.current.dateComponents([.hour, .minute], from: Date())
                 if let hour = components.hour, let minute = components.minute {
