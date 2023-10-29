@@ -13,6 +13,10 @@ struct FlipClockApp: App {
         WindowGroup {
             ContentView().preferredColorScheme(.dark)
                 .background(.black).ignoresSafeArea(.all)
-        }.windowStyle(.hiddenTitleBar)
+        }
+        
+        #if os(macOS)
+        .windowStyle(.hiddenTitleBar)
+        #endif
     }
 }
