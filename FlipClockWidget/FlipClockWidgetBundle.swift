@@ -11,8 +11,8 @@ import SwiftUI
 @main
 struct FlipClockWidgetBundle: WidgetBundle {
     var body: some Widget {
+        DualWidget()
         HoursWidget()
         MinutesWidget()
-        DualWidget()
     }
 }
