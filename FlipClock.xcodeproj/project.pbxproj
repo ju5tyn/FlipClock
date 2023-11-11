@@ -23,6 +23,8 @@
 		3A4BCADE2AED95C000B0DE02 /* ClockElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BCADD2AED95C000B0DE02 /* ClockElement.swift */; };
 		3A4BCADF2AED95C000B0DE02 /* ClockElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BCADD2AED95C000B0DE02 /* ClockElement.swift */; };
 		3A4BCAE22AEDC99F00B0DE02 /* DualWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BCAE12AEDC99F00B0DE02 /* DualWidget.swift */; };
+		3AC366C62B003CB3001F1B59 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC366C52B003CB3001F1B59 /* ClockView.swift */; };
+		3AC366C82B003D66001F1B59 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC366C72B003D66001F1B59 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		3A4BCADD2AED95C000B0DE02 /* ClockElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockElement.swift; sourceTree = "<group>"; };
 		3A4BCAE02AED97C200B0DE02 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		3A4BCAE12AEDC99F00B0DE02 /* DualWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualWidget.swift; sourceTree = "<group>"; };
+		3AC366C52B003CB3001F1B59 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		3AC366C72B003D66001F1B59 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 			children = (
 				3A0617702AE9944F0090D73E /* FlipClockApp.swift */,
 				3A0617722AE9944F0090D73E /* ContentView.swift */,
+				3AC366C52B003CB3001F1B59 /* ClockView.swift */,
+				3AC366C72B003D66001F1B59 /* SettingsView.swift */,
 				3A0617742AE994500090D73E /* Assets.xcassets */,
 				3A0617762AE994500090D73E /* Preview Content */,
 			);
@@ -263,7 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AC366C82B003D66001F1B59 /* SettingsView.swift in Sources */,
 				3A4BCADE2AED95C000B0DE02 /* ClockElement.swift in Sources */,
+				3AC366C62B003CB3001F1B59 /* ClockView.swift in Sources */,
 				3A0617732AE9944F0090D73E /* ContentView.swift in Sources */,
 				3A0617712AE9944F0090D73E /* FlipClockApp.swift in Sources */,
 			);
