@@ -16,7 +16,7 @@ struct SettingsView: View{
         }
         .tabItem {
             Image(systemName: "gear.circle.fill")
-            Text("Settings")
+            Text("Preferences")
         }
         
     }

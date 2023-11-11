@@ -8,12 +8,17 @@ struct ClockView: View {
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
-    
     var body: some View {
         NavigationStack {
-            ScrollView {
-                HStack {
-                    Group {
+            List {
+                VStack {
+                    HStack {
+                        Text("Current time:")
+                        Spacer()
+                    }
+                    
+                    HStack {
+                        Spacer()
                         ClockElement(number: hours, padding: 2.5)
                         #if os(macOS)
                             .padding()
@@ -22,10 +27,21 @@ struct ClockView: View {
                         #if os(macOS)
                             .padding()
                         #endif
+                        Spacer()
                     }
+                    
+                    
                 }
-                .padding()
+                .padding() // Padding inside the border
+                .background(RoundedRectangle(cornerRadius: 10) // Rounded rectangle with clear background
+                    .stroke(.tertiary, lineWidth: 3) // White border
+                                .background(Color.clear) // Clear background inside the border
+                )
+                .listRowBackground(Color.clear)
+                .listRowInsets(EdgeInsets(.zero))
+                
             }
+            
             .navigationTitle("FlipClock")
             .onReceive(timer) { _ in
                 let components = Calendar.current.dateComponents([.hour, .minute], from: Date())
@@ -37,7 +53,7 @@ struct ClockView: View {
         }
         .tabItem {
             Image(systemName: "deskclock.fill")
-            Text("Home")
+            Text("Clock")
         }
     }
 }
