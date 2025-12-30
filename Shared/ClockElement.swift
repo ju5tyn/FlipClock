@@ -47,8 +47,9 @@ struct ClockElement: View {
                     .contentTransition(.numericText())
                 Rectangle()
                     .fill(Color.black)
-                    .opacity(0.5)
+                    .opacity(isTinted ? 0.1 : 0.5)
                     .frame(height: padding)
+                
             }
             
         }.id(number)
