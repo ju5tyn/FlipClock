@@ -1,22 +1,15 @@
 # FlipClock
 
-<div align="center">
+<div align="left">
   <img src="https://justynhenman.com/images/thumbs/flipclock.png" alt="Flip Clock" width="300">
 </div>
 
+A flip clock designed to work seamlessly with iOS's StandBy mode.
+
 ---
 
-## Features
-- **Standby Compatible**: Works seamlessly with iOS 17's standby mode.
-- **Minimalistic Design**: Clean and intuitive interface.
-
-## Installation
-
-App Store download coming soon!
-
-## Support
-
-For any issues or feedback, please [contact us](#).
+### How to build?
+Simply clone the latest build and run in Xcode
 
 ---
  
