@@ -16,7 +16,6 @@ struct ClockView: View {
                         Text("Current time:")
                         Spacer()
                     }
-                    
                     HStack {
                         Spacer()
                         ClockElement(number: hours, padding: 2.5)
@@ -29,8 +28,6 @@ struct ClockView: View {
                         #endif
                         Spacer()
                     }
-                    
-                    
                 }
                 .padding() // Padding inside the border
                 .background(RoundedRectangle(cornerRadius: 10) // Rounded rectangle with clear background
@@ -38,8 +35,6 @@ struct ClockView: View {
                                 .background(Color.clear) // Clear background inside the border
                 )
                 .listRowBackground(Color.clear)
-                .listRowInsets(EdgeInsets(.zero))
-                
             }
             
             .navigationTitle("FlipClock")

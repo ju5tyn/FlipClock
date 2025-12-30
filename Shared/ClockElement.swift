@@ -10,19 +10,32 @@ import SwiftUI
 struct ClockElement: View {
     
     var number: String
+    var isTinted: Bool = false
     
     var padding: CGFloat = 2
     
     var body: some View {
         Group {
             ZStack {
-                LinearGradient(gradient:
-                                Gradient(colors: [
-                                    Color(red: 0.25, green: 0.25, blue: 0.25),
-                                    Color(red: 0.05, green: 0.05, blue: 0.05)]), startPoint: .top, endPoint: .bottom)
-                    .foregroundStyle(.gray)
-                    .clipShape(.rect(cornerRadii: RectangleCornerRadii(topLeading: 10, bottomLeading: 10, bottomTrailing: 10, topTrailing: 10)))
-                    .aspectRatio(1.0, contentMode: .fit)
+                if !isTinted{
+                    LinearGradient(gradient:
+                                    Gradient(colors: [
+                                        Color(red: 0.25, green: 0.25, blue: 0.25),
+                                        Color(red: 0.05, green: 0.05, blue: 0.05)]), startPoint: .top, endPoint: .bottom)
+                        .foregroundStyle(.gray)
+                        .clipShape(.rect(cornerRadii: RectangleCornerRadii(topLeading: 10, bottomLeading: 10, bottomTrailing: 10, topTrailing: 10)))
+                        .aspectRatio(1.0, contentMode: .fit)
+                }else{
+                    LinearGradient(gradient:
+                                    Gradient(colors: [
+                                        Color(red: 0.25, green: 0.25, blue: 0.25),
+                                        Color(red: 0.05, green: 0.05, blue: 0.05)]), startPoint: .top, endPoint: .bottom)
+                        .foregroundStyle(.gray)
+                        .clipShape(.rect(cornerRadii: RectangleCornerRadii(topLeading: 10, bottomLeading: 10, bottomTrailing: 10, topTrailing: 10)))
+                        .aspectRatio(1.0, contentMode: .fit)
+                        .luminanceToAlpha()
+                }
+                
                 Text(String(number))
                     .font(.custom("Helvetica", size: 500))
                     .fontWeight(.bold)
@@ -34,7 +47,7 @@ struct ClockElement: View {
                     .contentTransition(.numericText())
                 Rectangle()
                     .fill(Color.black)
-                    .opacity(0.5)
+                    .opacity(isTinted ? 0.1 : 0.5)
                     .frame(height: padding)
             }
             

@@ -9,10 +9,11 @@ import WidgetKit
 import SwiftUI
 
 struct HoursEntryView: View {
+    @Environment(\.widgetRenderingMode) var renderingMode
     var entry: Provider.Entry
 
     var body: some View {
-        ClockElement(number: String(format: "%02d", Calendar.current.component(.hour, from: entry.date)))
+        ClockElement(number: String(format: "%02d", Calendar.current.component(.hour, from: entry.date)), isTinted: (renderingMode == .accented || renderingMode == .vibrant))
     }
 }
 
