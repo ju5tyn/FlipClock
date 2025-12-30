@@ -17,8 +17,7 @@ struct HoursEntryView: View {
     var body: some View {
         switch renderingMode{
             case .accented, .vibrant:
-                ClockElement(number: String(format: "%02d", Calendar.current.component(.hour, from: entry.date)))
-                    .luminanceToAlpha()
+                ClockElement(number: String(format: "%02d", Calendar.current.component(.hour, from: entry.date)), isTinted: true)
             case .fullColor:
                 ClockElement(number: String(format: "%02d", Calendar.current.component(.hour, from: entry.date)))
             default:
