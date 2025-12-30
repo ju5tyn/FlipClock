@@ -49,7 +49,6 @@ struct ClockElement: View {
                     .fill(Color.black)
                     .opacity(isTinted ? 0.1 : 0.5)
                     .frame(height: padding)
-                
             }
             
         }.id(number)
