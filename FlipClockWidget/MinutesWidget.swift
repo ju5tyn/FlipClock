@@ -13,14 +13,7 @@ struct MinutesEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {
-        switch renderingMode{
-            case .accented, .vibrant:
-                ClockElement(number: String(format: "%02d", Calendar.current.component(.minute, from: entry.date)), isTinted: true)
-            case .fullColor:
-                ClockElement(number: String(format: "%02d", Calendar.current.component(.minute, from: entry.date)))
-            default:
-                ClockElement(number: String(format: "%02d", Calendar.current.component(.minute, from: entry.date)))
-        }
+        ClockElement(number: String(format: "%02d", Calendar.current.component(.minute, from: entry.date)), isTinted: (renderingMode == .accented || renderingMode == .vibrant))
     }
 }
 
@@ -31,7 +24,8 @@ struct MinutesWidget: Widget {
         AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
             MinutesEntryView(entry: entry)
                 .containerBackground(.black, for: .widget)
-        }.supportedFamilies([.systemSmall])
+        }
+        .supportedFamilies([.systemSmall])
     }
 }
 
