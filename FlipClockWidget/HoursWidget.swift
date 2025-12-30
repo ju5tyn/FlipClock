@@ -8,11 +8,22 @@
 import WidgetKit
 import SwiftUI
 
+
+
 struct HoursEntryView: View {
+    @Environment(\.widgetRenderingMode) var renderingMode
     var entry: Provider.Entry
 
     var body: some View {
-        ClockElement(number: String(format: "%02d", Calendar.current.component(.hour, from: entry.date)))
+        switch renderingMode{
+            case .accented, .vibrant:
+                ClockElement(number: String(format: "%02d", Calendar.current.component(.hour, from: entry.date)))
+                    .luminanceToAlpha()
+            case .fullColor:
+                ClockElement(number: String(format: "%02d", Calendar.current.component(.hour, from: entry.date)))
+            default:
+                ClockElement(number: String(format: "%02d", Calendar.current.component(.hour, from: entry.date)))
+        }
     }
 }
 
